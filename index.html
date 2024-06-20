@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Multiplication Table with jQuery UI</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        form { margin-bottom: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background-color: #f2f2f2; }
+        .slider { margin-top: 10px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Multiplication Table with jQuery UI</h1>
+    <form id="multiplication-form">
+        <label for="hStart">Horizontal Start:</label>
+        <input type="number" id="hStart" name="hStart" required>
+        <div id="hStart-slider" class="slider"></div>
+
+        <label for="hEnd">Horizontal End:</label>
+        <input type="number" id="hEnd" name="hEnd" required>
+        <div id="hEnd-slider" class="slider"></div>
+
+        <label for="vStart">Vertical Start:</label>
+        <input type="number" id="vStart" name="vStart" required>
+        <div id="vStart-slider" class="slider"></div>
+
+        <label for="vEnd">Vertical End:</label>
+        <input type="number" id="vEnd" name="vEnd" required>
+        <div id="vEnd-slider" class="slider"></div>
+
+        <button type="submit">Generate Table</button>
+    </form>
+    <div id="table-container"></div>
+    
+    <!-- Load jQuery and other dependencies first -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script>
+    
+    <!-- Load our custom script last -->
+    <script src="table.js"></script>
+</body>
+</html>
